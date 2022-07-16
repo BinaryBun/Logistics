@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Logist</title>
+</head>
+<body>
+  <div class="logo">
+    <h1 class="init">Logist</h1>
+    <div class="decription"><h1>Logistic company</h1></div>
+  </div>
+
+  <form method="post" class="find" action="/" >
+    <div class="search">
+      <input type="text" class="main" name="find" autocomplete="off">
+      <button class="main">Search</button>
+    </div>
+  </form>
+
+  <div class="logs">
+    <h3 class="footer">Logistic information</h3>
+      {{ range .Logs}}
+        <div class="point">
+          {{ range . }}
+            {{ . }} <br>
+          {{end }}
+        </div>
+      {{ end }}
+    </div>
+</body>
+</html>
